@@ -42,8 +42,13 @@ var Library = /** @class */ (function () {
     Library.prototype.getUser = function () {
         return "Books borrowed by ".concat(this.userName);
     };
+    Library.prototype.setBookGenre = function (getBookGenre) {
+        this.getBookGenre = getBookGenre;
+    };
     return Library;
 }());
 var library = new Library("Pamela", new Horror());
 console.log(library.getGenre());
 console.log(library.getUser());
+library.setBookGenre(new Fiction());
+console.log(library.getGenre());

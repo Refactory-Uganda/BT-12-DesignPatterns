@@ -80,9 +80,14 @@ class Library implements ILibrary {
 	getUser() {
 		return `Books borrowed by ${this.userName}`;
 	}
+	setBookGenre(getBookGenre: BookGenre){
+		this.getBookGenre = getBookGenre
+	}
 }
 
 let library = new Library("Pamela", new Horror());
 
 console.log(library.getGenre());
 console.log(library.getUser());
+library.setBookGenre(new Fiction());
+console.log(library.getGenre());
