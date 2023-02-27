@@ -7,7 +7,7 @@
                 - UID authentication (userid, password)
                 - social authentication (facebook, twitter)
                 - Json Web Tokens (jwt token)
-*/ 
+*/
 
 // Strategy (Abstraction)
     // Login
@@ -19,9 +19,27 @@
         - UID authentication (userid, password)
         - social authentication (facebook, twitter)
         - Json Web Tokens (jwt token)
-    */ 
+    */
 
 // Context
     // rms
 
 // client (functions)
+
+// The Context Class
+class Computer {
+    login(loginMethod: string, credentials: any) {
+        if (loginMethod == "basic") {    
+            let username = credentials.username;
+            let password = credentials.password;
+            console.log(`User loggedIn with username: ${username} and password: ${password}`);
+        }
+    }
+}
+
+// Client
+function client() {
+    let computer: Computer = new Computer();
+    computer.login('basic', { username: 'richdad', password: 'coolrichie' });
+}
+client();
