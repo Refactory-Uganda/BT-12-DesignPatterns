@@ -26,6 +26,10 @@
 
 // client (functions)
 
+/*
+    REFACTORING:
+*/
+
 // The Context Class
 class Computer {
     login(loginMethod: string, credentials: any) {
@@ -33,13 +37,27 @@ class Computer {
             let username = credentials.username;
             let password = credentials.password;
             console.log(`User loggedIn with username: ${username} and password: ${password}`);
+        } else if (loginMethod === "email") {
+            let email = credentials.email;
+            let password = credentials.password;
+            console.log(`User loggedIn with username: ${email} and password: ${password}`);
+        } else if (loginMethod === "userId") {
+            let userId = credentials.userId;
+            let password = credentials.password;
+            console.log(`User loggedIn with username: ${userId} and password: ${password}`);
         }
     }
 }
+/*
+    What varies?
+    What stays the same?
+*/
 
 // Client
 function client() {
     let computer: Computer = new Computer();
     computer.login('basic', { username: 'richdad', password: 'coolrichie' });
+    computer.login('email', { email: 'richdad@example.com', password: 'richiecool' });
+    computer.login('userId', { userId: 'DF123VFG', password: 'userpass' });
 }
 client();
