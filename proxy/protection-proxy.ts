@@ -9,7 +9,10 @@ class RealInternet implements Internet {
 }
 
 class ProxyInternet implements Internet {
-  constructor(private realInternet: Internet, private bannedSites: string[]) {}
+  private realInternet: Internet;
+  constructor( private bannedSites: string[]) {
+    this.realInternet = new RealInternet();
+  }
 
   connectTo(serverHost: string): void {
     if (this.bannedSites.includes(serverHost)) {
@@ -47,7 +50,7 @@ class Client {
 
     // use ProxyInternet to connect to sites
     // banned sites are passed to ProxyInternet
-    const proxyInternet: Internet = new ProxyInternet(realInternet, banned);
+    const proxyInternet: Internet = new ProxyInternet(banned);
     console.log();
     console.log(Client.padBoth("PROXY INTERNET", 30, "-"));
     sites.forEach((site) => proxyInternet.connectTo(site));
