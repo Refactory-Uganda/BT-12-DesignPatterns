@@ -1,4 +1,3 @@
-// //!
 var Adventure = /** @class */ (function () {
     function Adventure() {
     }
@@ -19,7 +18,7 @@ var NonFiction = /** @class */ (function () {
     function NonFiction() {
     }
     NonFiction.prototype.getBookList = function () {
-        return "List of NonFiction books ... [Principia Mathematica, Concepts of Engineering....]";
+        return "List of NonFiction books ... [Design Patterns, Principia Mathematica, Concepts of Engineering....]";
     };
     return NonFiction;
 }());
@@ -47,8 +46,8 @@ var Library = /** @class */ (function () {
     };
     return Library;
 }());
-var library = new Library("Pamela", new Horror());
+var library = new Library("Pamela", new NonFiction());
 console.log(library.getGenre());
-console.log(library.getUser());
-library.setBookGenre(new Fiction());
-console.log(library.getGenre());
+// console.log(library.getUser());
+// library.setBookGenre(new Fiction());
+// console.log(library.getGenre());

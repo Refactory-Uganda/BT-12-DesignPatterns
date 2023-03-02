@@ -21,7 +21,7 @@ class Fiction implements BookGenre {
 
 class NonFiction implements BookGenre {
 	getBookList() {
-		return `List of NonFiction books ... [Principia Mathematica, Concepts of Engineering....]`;
+		return `List of NonFiction books ... [Design Patterns, Principia Mathematica, Concepts of Engineering....]`;
 	}
 }
 
@@ -51,9 +51,9 @@ class Library implements ILibrary {
 	}
 }
 
-let library = new Library("Pamela", new Horror());
+let library = new Library("Pamela", new NonFiction());
 
 console.log(library.getGenre());
-console.log(library.getUser());
-library.setBookGenre(new Fiction());
-console.log(library.getGenre());
+// console.log(library.getUser());
+// library.setBookGenre(new Fiction());
+// console.log(library.getGenre());
