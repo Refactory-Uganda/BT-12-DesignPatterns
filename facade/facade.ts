@@ -1,37 +1,3 @@
-// //!
-
-// class Adventure {
-// 	getBookList() {
-// 		return `List of Adventure books ... [Peter Pan, Treasure Island...]`;
-// 	}
-// }
-
-// class Fiction {
-// 	getBookList() {
-// 		return `List of Fiction books ... [Oliver Twist, 1984]`;
-// 	}
-// }
-
-// class NonFiction {
-// 	getBookList() {
-// 		return `List of NonFiction books ... [Principia Mathematica, Concepts of Engineering....]`;
-// 	}
-// }
-
-// class Horror {
-// 	getBookList() {
-// 		return `List of Horror books ... [Game of Thrones, I know what you did last summer......]`;
-// 	}
-// }
-
-// function getGenreBook(genre) {
-// 	return genre;
-// }
-
-// console.log(getGenreBook(new Fiction().getBookList()));
-// console.log(getGenreBook(new Adventure().getBookList()));
-// console.log(getGenreBook(new NonFiction().getBookList()));
-
 interface ILibrary {
 	getGenre(): string;
 	getUser(): string;
@@ -80,8 +46,8 @@ class Library implements ILibrary {
 	getUser() {
 		return `Books borrowed by ${this.userName}`;
 	}
-	setBookGenre(getBookGenre: BookGenre){
-		this.getBookGenre = getBookGenre
+	setBookGenre(getBookGenre: BookGenre) {
+		this.getBookGenre = getBookGenre;
 	}
 }
 
