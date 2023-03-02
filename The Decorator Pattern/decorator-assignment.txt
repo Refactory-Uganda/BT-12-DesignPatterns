@@ -1,0 +1,13 @@
+TOPIC: DECORATOR PATTERN
+GROUP MEMEBERS: Alinda, Wil, Gerald, Dominic, Richard
+#Definition
+
+#Description
+
+#why decorator pattern
+
+#real world application of the decorator pattern
+
+#strucuture (class diagram)
+
+#implementation of the decorator pattern
